@@ -1,0 +1,55 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Product API with auhtentication",
+        "title": "Go Expert - Desafio de Multithreading e APIs",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Jhonas Alves",
+            "email": "jhonas.alvesm@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "paths": {
+        "/cep/{cep}": {
+            "get": {
+                "description": "Get an address information based on CEP (postal code)",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "cep"
+                ],
+                "summary": "Get an address by CEP",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "CEP (postal code)",
+                        "name": "cep",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "type": ""
+                        }
+                    },
+                    "404": {
+                        "description": "CEP not found",
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

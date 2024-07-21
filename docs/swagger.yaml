@@ -1,0 +1,37 @@
+basePath: /
+host: localhost:8000
+info:
+  contact:
+    email: jhonas.alvesm@gmail.com
+    name: Jhonas Alves
+  description: Product API with auhtentication
+  termsOfService: http://swagger.io/terms/
+  title: Go Expert - Desafio de Multithreading e APIs
+  version: "1.0"
+paths:
+  /cep/{cep}:
+    get:
+      consumes:
+      - application/json
+      description: Get an address information based on CEP (postal code)
+      parameters:
+      - description: CEP (postal code)
+        in: path
+        name: cep
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            type: ""
+        "404":
+          description: CEP not found
+          schema:
+            type: ""
+      summary: Get an address by CEP
+      tags:
+      - cep
+swagger: "2.0"
